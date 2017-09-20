@@ -15,6 +15,7 @@
 		CE38DC461F71946F00059AD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38DC441F71946F00059AD6 /* LaunchScreen.storyboard */; };
 		CE38DC511F71946F00059AD6 /* strokeNinjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC501F71946F00059AD6 /* strokeNinjaTests.swift */; };
 		CE38DC5C1F71946F00059AD6 /* strokeNinjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC5B1F71946F00059AD6 /* strokeNinjaUITests.swift */; };
+		CE38DC6A1F71AE6600059AD6 /* drawPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC691F71AE6600059AD6 /* drawPadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE38DC571F71946F00059AD6 /* strokeNinjaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strokeNinjaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE38DC5B1F71946F00059AD6 /* strokeNinjaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strokeNinjaUITests.swift; sourceTree = "<group>"; };
 		CE38DC5D1F71946F00059AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE38DC691F71AE6600059AD6 /* drawPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = drawPadViewController.swift; path = ../drawPadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				CE38DC381F71946F00059AD6 /* AppDelegate.swift */,
 				CE38DC3A1F71946F00059AD6 /* ViewController.swift */,
+				CE38DC691F71AE6600059AD6 /* drawPadViewController.swift */,
 				CE38DC3C1F71946F00059AD6 /* Main.storyboard */,
 				CE38DC421F71946F00059AD6 /* Assets.xcassets */,
 				CE38DC441F71946F00059AD6 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE38DC6A1F71AE6600059AD6 /* drawPadViewController.swift in Sources */,
 				CE38DC3B1F71946F00059AD6 /* ViewController.swift in Sources */,
 				CE38DC411F71946F00059AD6 /* strokeNinja.xcdatamodeld in Sources */,
 				CE38DC391F71946F00059AD6 /* AppDelegate.swift in Sources */,
