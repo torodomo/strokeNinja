@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					CE38DC341F71946F00059AD6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = XNN3Q98CR2;
+						DevelopmentTeam = 6D82L3F58G;
 						ProvisioningStyle = Automatic;
 					};
 					CE38DC4B1F71946F00059AD6 = {
@@ -527,12 +527,13 @@
 			baseConfigurationReference = 4DD16B5F7DCE9C22F085BFE8 /* Pods-strokeNinja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XNN3Q98CR2;
+				DEVELOPMENT_TEAM = 6D82L3F58G;
 				INFOPLIST_FILE = strokeNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torodomo.strokeNinja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -541,12 +542,13 @@
 			baseConfigurationReference = AC5C4C323849D4FC8A9F7B2F /* Pods-strokeNinja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XNN3Q98CR2;
+				DEVELOPMENT_TEAM = 6D82L3F58G;
 				INFOPLIST_FILE = strokeNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torodomo.strokeNinja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

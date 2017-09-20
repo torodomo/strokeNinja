@@ -31,9 +31,9 @@ class CreateGameViewController: UIViewController, UITableViewDataSource, UITable
         
         let appId = "c12578dd"
         let appKey = "ac6827501f0d471fe33e988f50cd3d9c"
-        let language = "en"
-        let filters = "domains=mammal"
-        let url = URL(string: "https://od-api.oxforddictionaries.com:443/api/v1/wordlist/\(language)/\(filters)")!
+//        let language = "en"
+//        let filters = "domains=mammal"
+        let url = URL(string: "https://od-api.oxforddictionaries.com:443/api/v1/wordlist/en/domains%3Dmammal?word_length=%3E3%3C6")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(appId, forHTTPHeaderField: "app_id")
@@ -81,6 +81,22 @@ class CreateGameViewController: UIViewController, UITableViewDataSource, UITable
             cell.textLabel?.text = friends[indexPath.row]
             return cell
             
+        }
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func goButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "drawMisson", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "drawMisson"{
+            let nav = segue.destination as! UINavigationController
+            let drawPad = nav.topViewController as! drawPadViewController
+            drawPad.viewDidLoad()
         }
     }
 }

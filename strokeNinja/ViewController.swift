@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import FacebookLogin
 import FBSDKLoginKit
 
@@ -48,6 +47,23 @@ class ViewController: UIViewController {
                     //print(self.dict)
                     
                     //create user if user does not exist
+                    
+                    let url = URL(string: "https://18.221.96.125/users")!
+                    let request = URLRequest(url: url)
+                    let session = URLSession.shared
+                    _ = session.dataTask(with: request, completionHandler: { data, response, error in
+
+                        if let info = data {
+                            // check info if the users exist
+                            print(info)
+//                            let name = self.dict["name"] as? String
+//                            let url = URL(string: "https://18.221.96.125/users/add/\(name)/\(name)")!
+//                            var request = URLRequest(url: url)
+//                            let session = URLSession.shared
+//                            _ = session.dataTask(with: request).resume()
+                            
+                        }
+                    }).resume()
                     
                     self.performSegue(withIdentifier: "login", sender: nil)
                 }
