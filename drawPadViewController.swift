@@ -10,6 +10,15 @@ import UIKit
 
 class drawPadViewController: UIViewController {
 
+    var player1: String?
+    var player2: String?
+    var words: [String]?
+    
+    
+    @IBOutlet var navItem: UINavigationItem!
+    
+    
+    
     var lastPoint = CGPoint(x: 0, y: 0)
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0

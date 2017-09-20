@@ -10,7 +10,7 @@ import UIKit
 
 class CreateGameViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var id: Int?
+    var id: String?
     var name: String?
     
     @IBOutlet weak var wordTable: UITableView!
@@ -18,7 +18,10 @@ class CreateGameViewController: UIViewController, UITableViewDataSource, UITable
     
     var word: [String] = []
     var friends: [String] = []
+    var friends_id: [String] = []
     
+    var chosenWord: Int = -1
+    var chosenFriend: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,27 @@ class CreateGameViewController: UIViewController, UITableViewDataSource, UITable
         wordTable.delegate = self
         friendTable.dataSource = self
         friendTable.delegate = self
+        
+        let url2 = URL(string: "http://18.220.96.49/users")!
+        let request2 = URLRequest(url: url2)
+        let session2 = URLSession.shared
+        _ = session2.dataTask(with: request2, completionHandler: { data, response, error in
+            if let info = data {
+                // check info if the users exist
+                let jsonData = try? (JSONSerialization.jsonObject(with: info, options: .mutableContainers) as! [String:Any])
+                //print(jsonData!)
+                let dict = jsonData?["users"] as! [[String:Any]]
+                for user in dict{
+                    let name = user["name"] as! String
+                    if name != self.name{
+                        self.friends.append(name)
+                        self.friends_id.append(user["_id"] as! String)
+                    }
+                }
+                self.friendTable.reloadData()
+            }
+        }).resume()
+        
         // Do any additional setup after loading the view.
         
         let appId = "c12578dd"
@@ -89,14 +113,28 @@ class CreateGameViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func goButtonPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "drawMisson", sender: nil)
+        if chosenFriend > -1 && chosenWord > -1{
+            performSegue(withIdentifier: "drawMisson", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "drawMisson"{
             let nav = segue.destination as! UINavigationController
             let drawPad = nav.topViewController as! drawPadViewController
+            drawPad.words = word
+            drawPad.player1 = id
+            drawPad.player2 = friends_id[chosenFriend]
+            drawPad.navItem.title = word[chosenWord]
             drawPad.viewDidLoad()
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.tag == 1{
+            chosenWord = indexPath.row
+        }
+        else {
+            chosenFriend = indexPath.row
         }
     }
 }

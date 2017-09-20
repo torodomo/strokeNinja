@@ -16,6 +16,8 @@ class ViewController: UIViewController {
 
     var dict : [String : AnyObject]!
     
+    var id: String?
+    
     @IBOutlet weak var login: UIButton!
     
     override func viewDidLoad() {
@@ -48,19 +50,30 @@ class ViewController: UIViewController {
                     
                     //create user if user does not exist
                     
-                    let url = URL(string: "https://18.221.96.125/users")!
+                    let url = URL(string: "http://18.220.96.49/users")!
                     let request = URLRequest(url: url)
                     let session = URLSession.shared
                     _ = session.dataTask(with: request, completionHandler: { data, response, error in
 
                         if let info = data {
                             // check info if the users exist
-                            print(info)
-//                            let name = self.dict["name"] as? String
-//                            let url = URL(string: "https://18.221.96.125/users/add/\(name)/\(name)")!
-//                            var request = URLRequest(url: url)
-//                            let session = URLSession.shared
-//                            _ = session.dataTask(with: request).resume()
+                            let jsonData = try? (JSONSerialization.jsonObject(with: info, options: .mutableContainers) as! [String:Any])
+                            //print(jsonData!)
+                            var name = self.dict["name"] as! String
+                            name = name.replacingOccurrences(of: " ", with: "")
+                            let dict = jsonData?["users"] as! [[String:Any]]
+                            for user in dict{
+                                let name2 = user["name"] as! String
+                                if name2 == name{
+                                    self.id = user["_id"] as? String
+                                }
+                            }
+                            if self.id == nil{
+                                let url = URL(string: "http://18.220.96.49/users/add/\(name)/\(name)")!
+                                let request = URLRequest(url: url)
+                                let session = URLSession.shared
+                                _ = session.dataTask(with: request).resume()
+                            }
                             
                         }
                     }).resume()
@@ -74,7 +87,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "login"{
             let startGame = segue.destination as! StartGameViewController
-            startGame.name = dict["name"] as? String
+            var name = self.dict["name"] as! String
+            name = name.replacingOccurrences(of: " ", with: "")
+            startGame.name = name
+            startGame.id = id
         }
     }
 }

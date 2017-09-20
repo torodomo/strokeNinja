@@ -10,7 +10,7 @@ import UIKit
 
 class StartGameViewController: UIViewController {
 
-    var id: Int?
+    var id: String?
     var name: String?
     
     override func viewDidLoad() {
@@ -29,6 +29,7 @@ class StartGameViewController: UIViewController {
             let nav = segue.destination as! UINavigationController
             let createGame = nav.topViewController as! CreateGameViewController
             createGame.name = name
+            createGame.id = id
         }
     }
 }

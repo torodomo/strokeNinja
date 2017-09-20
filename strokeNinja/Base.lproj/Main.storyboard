@@ -121,6 +121,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="Vex-SN-7Gb" kind="presentation" identifier="CreateGame" id="giK-Pc-wtQ"/>
+                        <segue destination="dba-V0-MwW" kind="presentation" identifier="GuessMission" id="0aV-Zw-2Qw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwY-X8-gUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,6 +294,9 @@
                         <color key="backgroundColor" red="0.32990175485610962" green="0.46308034658432007" blue="0.75307989120483398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Guess Drawig View" id="h12-R4-CPo"/>
+                    <connections>
+                        <segue destination="QU8-Gc-HfL" kind="show" id="Ubp-Xe-CHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDQ-3Z-tVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,6 +333,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32990175485610962" green="0.46308034658432007" blue="0.75307989120483398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="VNV-5j-SaR" kind="show" id="0qn-6m-rYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPp-g4-IVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,7 +496,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainImageView" destination="KgZ-P9-7tf" id="GZr-NF-mkx"/>
+                        <outlet property="navItem" destination="OLw-a3-F8L" id="hv1-mK-W1I"/>
                         <outlet property="tempImageView" destination="k9L-Ad-mTe" id="cB8-m4-Nue"/>
+                        <segue destination="VNV-5j-SaR" kind="show" identifier="FinishMission" id="KFD-1A-c12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6um-iS-nKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -511,4 +520,7 @@
         <image name="doodle_art" width="751" height="1063"/>
         <image name="facebook" width="400" height="150"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KFD-1A-c12"/>
+    </inferredMetricsTieBreakers>
 </document>
