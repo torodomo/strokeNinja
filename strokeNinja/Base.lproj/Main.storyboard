@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xh8-Ct-6mh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ztz-9k-g7I">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,9 +10,45 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="ZI8-6v-1Lv">
+            <objects>
+                <viewController id="ztz-9k-g7I" customClass="ViewController" customModule="strokeNinja" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6bK-9C-afS"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLg-gs-AiJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6gb-fv-k7x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doodle_art" translatesAutoresizingMaskIntoConstraints="NO" id="81U-jS-net">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxu-JE-jF7">
+                                <rect key="frame" x="0.0" y="257" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="ztz-9k-g7I" eventType="touchUpInside" id="ose-ep-kZf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="login" destination="hxu-JE-jF7" id="oo3-oG-fer"/>
+                        <segue destination="VNV-5j-SaR" kind="show" identifier="login" id="DZa-jE-mkt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOS-bs-Bcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889.85507246376824" y="183.42391304347828"/>
+        </scene>
+        <!--Start Game View Controller-->
         <scene sceneID="eW2-pS-vw9">
             <objects>
-                <viewController id="VNV-5j-SaR" sceneMemberID="viewController">
+                <viewController id="VNV-5j-SaR" customClass="StartGameViewController" customModule="strokeNinja" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QGz-iC-DVh"/>
                         <viewControllerLayoutGuide type="bottom" id="KwR-L9-MzQ"/>
@@ -122,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="180.16304347826087"/>
+            <point key="canvasLocation" x="1252" y="180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yIl-O8-aLq">
@@ -221,42 +257,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDQ-3Z-tVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1198.5507246376812" y="978.26086956521749"/>
-        </scene>
-        <!--LaunchPageView-->
-        <scene sceneID="9bZ-Hi-Ke0">
-            <objects>
-                <viewController title="LaunchPageView" id="Xh8-Ct-6mh" customClass="ViewController" customModule="strokeNinja" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zSU-Iq-l3f"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Rd-0p-se3"/>
-                    </layoutGuides>
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="FeY-xf-Rkt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIM-uk-Kl3">
-                                <rect key="frame" x="0.0" y="275" width="414" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="use facebook to play">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doodle_art" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-04-Mtz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="744"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aTi-Dh-RlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-702.89855072463774" y="181.79347826086959"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YIN-Nd-3ea">
@@ -432,5 +432,6 @@
         <image name="Red" width="53" height="332"/>
         <image name="Yellow" width="53" height="332"/>
         <image name="doodle_art" width="751" height="1063"/>
+        <image name="facebook" width="400" height="150"/>
     </resources>
 </document>

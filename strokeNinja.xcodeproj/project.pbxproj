@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4993EBF21F72076B0001ED39 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993EBF11F72076B0001ED39 /* StartGameViewController.swift */; };
+		49E82DC01F71EDA60051EFF5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49E82DBF1F71EDA60051EFF5 /* Podfile */; };
+		938A50CFD738BA7CEE9B6594 /* Pods_strokeNinja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631F1242729EAC793067CEBA /* Pods_strokeNinja.framework */; };
 		CE38DC391F71946F00059AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC381F71946F00059AD6 /* AppDelegate.swift */; };
 		CE38DC3B1F71946F00059AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC3A1F71946F00059AD6 /* ViewController.swift */; };
 		CE38DC3E1F71946F00059AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38DC3C1F71946F00059AD6 /* Main.storyboard */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4993EBF11F72076B0001ED39 /* StartGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		49E82DBF1F71EDA60051EFF5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4DD16B5F7DCE9C22F085BFE8 /* Pods-strokeNinja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeNinja.debug.xcconfig"; path = "Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja.debug.xcconfig"; sourceTree = "<group>"; };
+		631F1242729EAC793067CEBA /* Pods_strokeNinja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_strokeNinja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C4C323849D4FC8A9F7B2F /* Pods-strokeNinja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeNinja.release.xcconfig"; path = "Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja.release.xcconfig"; sourceTree = "<group>"; };
 		CE38DC351F71946F00059AD6 /* strokeNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = strokeNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE38DC381F71946F00059AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE38DC3A1F71946F00059AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938A50CFD738BA7CEE9B6594 /* Pods_strokeNinja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40579CDF31CC3D916FBA07CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				631F1242729EAC793067CEBA /* Pods_strokeNinja.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE38DC2C1F71946F00059AD6 = {
 			isa = PBXGroup;
 			children = (
+				49E82DBF1F71EDA60051EFF5 /* Podfile */,
 				CE38DC371F71946F00059AD6 /* strokeNinja */,
 				CE38DC4F1F71946F00059AD6 /* strokeNinjaTests */,
 				CE38DC5A1F71946F00059AD6 /* strokeNinjaUITests */,
 				CE38DC361F71946F00059AD6 /* Products */,
+				FAD6DC36F79C49D4F988FFF0 /* Pods */,
+				40579CDF31CC3D916FBA07CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +129,7 @@
 				CE38DC441F71946F00059AD6 /* LaunchScreen.storyboard */,
 				CE38DC471F71946F00059AD6 /* Info.plist */,
 				CE38DC3F1F71946F00059AD6 /* strokeNinja.xcdatamodeld */,
+				4993EBF11F72076B0001ED39 /* StartGameViewController.swift */,
 			);
 			path = strokeNinja;
 			sourceTree = "<group>";
@@ -131,6 +152,15 @@
 			path = strokeNinjaUITests;
 			sourceTree = "<group>";
 		};
+		FAD6DC36F79C49D4F988FFF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD16B5F7DCE9C22F085BFE8 /* Pods-strokeNinja.debug.xcconfig */,
+				AC5C4C323849D4FC8A9F7B2F /* Pods-strokeNinja.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE38DC601F71946F00059AD6 /* Build configuration list for PBXNativeTarget "strokeNinja" */;
 			buildPhases = (
+				223C13110A535E800A749477 /* [CP] Check Pods Manifest.lock */,
 				CE38DC311F71946F00059AD6 /* Sources */,
 				CE38DC321F71946F00059AD6 /* Frameworks */,
 				CE38DC331F71946F00059AD6 /* Resources */,
+				3D3BD0BD3972E8547DB3F583 /* [CP] Embed Pods Frameworks */,
+				60A517C80CB2D2434F37CD3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +232,7 @@
 				TargetAttributes = {
 					CE38DC341F71946F00059AD6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6D82L3F58G;
+						DevelopmentTeam = XNN3Q98CR2;
 						ProvisioningStyle = Automatic;
 					};
 					CE38DC4B1F71946F00059AD6 = {
@@ -243,6 +276,7 @@
 			files = (
 				CE38DC461F71946F00059AD6 /* LaunchScreen.storyboard in Resources */,
 				CE38DC431F71946F00059AD6 /* Assets.xcassets in Resources */,
+				49E82DC01F71EDA60051EFF5 /* Podfile in Resources */,
 				CE38DC3E1F71946F00059AD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +297,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		223C13110A535E800A749477 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-strokeNinja-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D3BD0BD3972E8547DB3F583 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60A517C80CB2D2434F37CD3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE38DC311F71946F00059AD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,6 +367,7 @@
 				CE38DC6A1F71AE6600059AD6 /* drawPadViewController.swift in Sources */,
 				CE38DC3B1F71946F00059AD6 /* ViewController.swift in Sources */,
 				CE38DC411F71946F00059AD6 /* strokeNinja.xcdatamodeld in Sources */,
+				4993EBF21F72076B0001ED39 /* StartGameViewController.swift in Sources */,
 				CE38DC391F71946F00059AD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +520,10 @@
 		};
 		CE38DC611F71946F00059AD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD16B5F7DCE9C22F085BFE8 /* Pods-strokeNinja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6D82L3F58G;
+				DEVELOPMENT_TEAM = XNN3Q98CR2;
 				INFOPLIST_FILE = strokeNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torodomo.strokeNinja;
@@ -436,9 +534,10 @@
 		};
 		CE38DC621F71946F00059AD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC5C4C323849D4FC8A9F7B2F /* Pods-strokeNinja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6D82L3F58G;
+				DEVELOPMENT_TEAM = XNN3Q98CR2;
 				INFOPLIST_FILE = strokeNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torodomo.strokeNinja;
@@ -524,6 +623,7 @@
 				CE38DC621F71946F00059AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE38DC631F71946F00059AD6 /* Build configuration list for PBXNativeTarget "strokeNinjaTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +632,7 @@
 				CE38DC651F71946F00059AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE38DC661F71946F00059AD6 /* Build configuration list for PBXNativeTarget "strokeNinjaUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +641,7 @@
 				CE38DC681F71946F00059AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
