@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4993EBF21F72076B0001ED39 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4993EBF11F72076B0001ED39 /* StartGameViewController.swift */; };
+		49A5E6701F721191005A65CF /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5E66F1F721191005A65CF /* CreateGameViewController.swift */; };
 		49E82DC01F71EDA60051EFF5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49E82DBF1F71EDA60051EFF5 /* Podfile */; };
 		938A50CFD738BA7CEE9B6594 /* Pods_strokeNinja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631F1242729EAC793067CEBA /* Pods_strokeNinja.framework */; };
 		CE38DC391F71946F00059AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE38DC381F71946F00059AD6 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		4993EBF11F72076B0001ED39 /* StartGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		49A5E66F1F721191005A65CF /* CreateGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
 		49E82DBF1F71EDA60051EFF5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4DD16B5F7DCE9C22F085BFE8 /* Pods-strokeNinja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-strokeNinja.debug.xcconfig"; path = "Pods/Target Support Files/Pods-strokeNinja/Pods-strokeNinja.debug.xcconfig"; sourceTree = "<group>"; };
 		631F1242729EAC793067CEBA /* Pods_strokeNinja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_strokeNinja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				CE38DC471F71946F00059AD6 /* Info.plist */,
 				CE38DC3F1F71946F00059AD6 /* strokeNinja.xcdatamodeld */,
 				4993EBF11F72076B0001ED39 /* StartGameViewController.swift */,
+				49A5E66F1F721191005A65CF /* CreateGameViewController.swift */,
 			);
 			path = strokeNinja;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A5E6701F721191005A65CF /* CreateGameViewController.swift in Sources */,
 				CE38DC6A1F71AE6600059AD6 /* drawPadViewController.swift in Sources */,
 				CE38DC3B1F71946F00059AD6 /* ViewController.swift in Sources */,
 				CE38DC411F71946F00059AD6 /* strokeNinja.xcdatamodeld in Sources */,

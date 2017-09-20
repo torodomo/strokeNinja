@@ -10,7 +10,7 @@ import UIKit
 
 class StartGameViewController: UIViewController {
 
-    var id: String?
+    var id: Int?
     var name: String?
     
     override func viewDidLoad() {
@@ -20,4 +20,15 @@ class StartGameViewController: UIViewController {
     }
 
 
+    @IBAction func startGamePressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "CreateGame", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CreateGame"{
+            let nav = segue.destination as! UINavigationController
+            let createGame = nav.topViewController as! CreateGameViewController
+            createGame.name = name
+        }
+    }
 }
